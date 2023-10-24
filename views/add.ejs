@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加记录</title>
+</head>
+<body>
+    <h2>添加记录</h2>
+    <form method="post" action="/add">
+        事项</br>
+        <input name="item" type="text"></br>
+
+        时间</br>
+        <input type="datetime-local" name="time"></br>
+
+        类型</br>
+        <select name="type" id="type">
+            <option value="-1">支出</option>
+            <option value="1">收入</option>
+        </select></br>
+
+        金额</br>
+        <input name="money" type="text"></br>
+
+        备注</br>
+        <input name="remind" type="text"></br>
+
+        <button name="submit" type="submit">添加</button>
+    </form>
+</body>
+</html>

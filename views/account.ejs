@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史</title>
+</head>
+<script>
+    document.getElementsByTagName("div")
+</script>
+<body>
+ <div><h2>添加历史</h2></div>
+ <div><a href="/account/create">新增收入/支出项目</a></div>
+ <div class="accounts">
+
+
+    <% accounts.forEach(item => { %>
+
+    <table border="1">
+        <tbody>
+          <tr>
+            <td>事项</td>
+            <td>时间</td>
+            <td>米</td>
+            <td>类型</td>
+            <td>备注</td>
+          </tr>
+          <tr>
+            <td><%=item.item %></td>
+            <td><%=item.time %></td>
+            <td><%=item.money %> ￥</td>
+            <td><%=item.type=="1"?"收入":"支出" %></td>
+            <td><%=item.remind %></td>
+          </tr>
+          
+        </tbody>
+        <colgroup>
+          <col style="width: 9.22222%;">
+          <col style="width: 14.6667%;">
+          <col style="width: 13.2222%;">
+          <col style="width: 9.22916%;">
+          <col style="width: 53.5486%;">
+        </colgroup>
+      </table>
+      <a href="/account/<%= item.id %>">
+      <input type="button" value="删除" onclick=""></input>
+      </a>
+    </br>
+<% }) %>
+ </div>
+</body>
+</html>
